@@ -6,7 +6,7 @@
 /*   By: mtajima <mtajima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 15:09:37 by mtajima           #+#    #+#             */
-/*   Updated: 2026/04/29 16:23:32 by mtajima          ###   ########.fr       */
+/*   Updated: 2026/04/30 18:23:33 by mtajima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	while (big[i] && i < len)
 	{
 		j = 0;
-		while (little[j] && (i + j) < len && big(i + j) == litle[j])
+		while (little[j] && (i + j) < len && big[i + j] == little[j])
 			j++;
 		if (!little[j])
 			return ((char *)&big[i]);

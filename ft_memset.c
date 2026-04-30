@@ -6,7 +6,7 @@
 /*   By: mtajima <mtajima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 20:06:41 by mtajima           #+#    #+#             */
-/*   Updated: 2026/04/29 13:41:23 by mtajima          ###   ########.fr       */
+/*   Updated: 2026/04/30 18:18:08 by mtajima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ void	*ft_memset(void *s, int c, size_t len)
 		ptr++;
 		len--;
 	}
-	return (b);
+	return (s);
 }

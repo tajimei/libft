@@ -6,13 +6,13 @@
 /*   By: mtajima <mtajima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 16:58:22 by mtajima           #+#    #+#             */
-/*   Updated: 2026/04/29 17:17:04 by mtajima          ###   ########.fr       */
+/*   Updated: 2026/04/30 18:29:05 by mtajima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	char	*dup;
 	size_t	len;
