@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtajima <mtajima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/29 14:30:28 by mtajima           #+#    #+#             */
-/*   Updated: 2026/04/30 16:14:46 by mtajima          ###   ########.fr       */
+/*   Created: 2026/04/30 16:09:01 by mtajima           #+#    #+#             */
+/*   Updated: 2026/04/30 16:22:16 by mtajima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *s, int c)
-{
-	unsigned char	uc;
-	char			*last;
+#include "libft.h"
 
-	uc = (unsigned char)c;
-	last = NULL;
-	while (*s)
+int	ft_lstsize(t_list *lst)
+{
+	int	count;
+
+	count = 0;
+	while (lst)
 	{
-		if (*s == uc)
-			last = (char *)s;
-		s++;
+		count++;
+		lst = lst->next;
 	}
-	if (uc == '\0')
-		return ((char *)s);
-	return (last);
+	return (count);
 }

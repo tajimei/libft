@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtajima <mtajima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/29 14:30:28 by mtajima           #+#    #+#             */
-/*   Updated: 2026/04/30 16:14:46 by mtajima          ###   ########.fr       */
+/*   Created: 2026/04/30 16:23:03 by mtajima           #+#    #+#             */
+/*   Updated: 2026/04/30 16:39:58 by mtajima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *s, int c)
-{
-	unsigned char	uc;
-	char			*last;
+#include "libft.h"
 
-	uc = (unsigned char)c;
-	last = NULL;
-	while (*s)
-	{
-		if (*s == uc)
-			last = (char *)s;
-		s++;
-	}
-	if (uc == '\0')
-		return ((char *)s);
-	return (last);
+t_list	*ft_lstlast(t_list *lst)
+{
+	if (!lst)
+		return (NULL);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }

@@ -1,40 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtajima <mtajima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/29 17:41:02 by mtajima           #+#    #+#             */
-/*   Updated: 2026/04/30 16:13:32 by mtajima          ###   ########.fr       */
+/*   Created: 2026/04/30 13:35:56 by mtajima           #+#    #+#             */
+/*   Updated: 2026/04/30 14:10:30 by mtajima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+static size_t	ft_numlen(int n)
 {
-	char	*join;
-	size_t	len1;
-	size_t	len2;
-	size_t	i;
+	size_t	len;
 
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
-	join = malloc(len1 + len2 + 1);
-	if (!join)
+	len = 0;
+	if (n <= 0)
+		len = 1;
+	while (n != 0)
+	{
+		n /= 10;
+		len++;
+	}
+	return (len);
+}
+
+char	*ft_itoa(int n)
+{
+	char	*str;
+	size_t	len;
+	long	nb;
+
+	nb = (long)n;
+	len = ft_numlen(n);
+	str = malloc(len + 1);
+	if (!str)
 		return (NULL);
-	i = 0;
-	while (i < len1)
+	str[len] = '\0';
+	if (nb < 0)
 	{
-		join[i] = s1[i];
-		i++;
+		str[0] = '-';
+		nb = -nb;
 	}
-	while (i < len1 + len2)
+	if (nb == 0)
+		str[0] = '0';
+	while (nb > 0)
 	{
-		join[i] = s2[i - len1];
-		i++;
+		len--;
+		str[len] = (nb % 10) + '0';
+		nb /= 10;
 	}
-	join[i] = '\0';
-	return (join);
+	return (str);
 }

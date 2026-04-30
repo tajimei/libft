@@ -6,7 +6,7 @@
 /*   By: mtajima <mtajima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 11:35:39 by meitajima         #+#    #+#             */
-/*   Updated: 2026/04/29 13:42:14 by mtajima          ###   ########.fr       */
+/*   Updated: 2026/04/30 15:09:30 by mtajima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stddef.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 // part1
 int					ft_isalpha(int c);
