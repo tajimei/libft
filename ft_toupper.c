@@ -6,11 +6,11 @@
 /*   By: mtajima <mtajima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 13:34:38 by mtajima           #+#    #+#             */
-/*   Updated: 2026/04/29 13:44:04 by mtajima          ###   ########.fr       */
+/*   Updated: 2026/05/05 18:37:50 by mtajima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (c - 32);

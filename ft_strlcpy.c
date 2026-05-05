@@ -6,13 +6,13 @@
 /*   By: mtajima <mtajima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 13:20:25 by mtajima           #+#    #+#             */
-/*   Updated: 2026/04/29 13:32:06 by mtajima          ###   ########.fr       */
+/*   Updated: 2026/05/05 18:37:14 by mtajima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 
