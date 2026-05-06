@@ -793,7 +793,6 @@ Claude (Anthropic) was used throughout this project as a learning support tool. 
 
 - **Function specifications**: Each function's behavior and edge cases were understood through interactive dialogue before implementing independently. Also used for translating the English subject to ensure correct understanding.
 - **Concept explanations**: Used to understand concepts such as `static` functions, `size_t`, file descriptors, function pointers, and linked list structure.
-- **README writing**: Used to help structure and write the README, including usage examples and edge case documentation.
 - **Code was not copied directly**: All implementations were written by hand and verified through testing.
 
 ---
@@ -1593,5 +1592,4 @@ t_list *new_lst = ft_lstmap(lst, to_upper_str, free);
 
 - **関数の仕様理解**：各関数の動作やエッジケースを、自分で実装する前に理解するために対話形式で仕様を理解。英語のsubjectを正しく理解するため、翻訳にも利用した。
 - **概念の理解**：`static` 関数、`size_t`、ファイルディスクリプタ、関数ポインタ、連結リスト構造などの概念理解に使用。
-- **README の作成**：使用例やエッジケースのドキュメント化を含むREADMEの構成・執筆に使用。
 - **コピーはしていません**：全ての実装は手書きで行い、テストを通じて動作を確認しました。
