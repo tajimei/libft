@@ -6,7 +6,7 @@
 /*   By: mtajima <mtajima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/30 16:42:16 by mtajima           #+#    #+#             */
-/*   Updated: 2026/05/05 19:25:00 by mtajima          ###   ########.fr       */
+/*   Updated: 2026/05/08 16:21:48 by mtajima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
+	if (!lst || !new)
+		return ;
 	if (!*lst)
 	{
 		*lst = new;

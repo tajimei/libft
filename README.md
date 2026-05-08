@@ -391,7 +391,7 @@ ft_atoi("abc")      // 0
 void *ft_calloc(size_t count, size_t size);
 ```
 
-Allocates `count * size` bytes of memory initialized to zero. Returns `NULL` on allocation failure.
+Allocates `count * size` bytes of memory initialized to zero. Returns `unique pointer` on allocation failure.
 
 ```c
 int *arr = ft_calloc(5, sizeof(int));
@@ -1190,7 +1190,7 @@ ft_atoi("abc")      // 0
 void *ft_calloc(size_t count, size_t size);
 ```
 
-`count * size` バイトのメモリをゼロで初期化して確保する。確保失敗時は `NULL` を返す。
+`count * size` バイトのメモリをゼロで初期化して確保する。確保失敗時は `unique pointer` を返す。
 
 ```c
 int *arr = ft_calloc(5, sizeof(int));
