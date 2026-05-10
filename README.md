@@ -354,7 +354,7 @@ ft_memcmp("abc", "axc", 3)  // negative
 #### `ft_strnstr` — Find substring within n characters
 
 ```c
-char *ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 ```
 
 Finds the first occurrence of `needle` in `haystack`, searching at most `len` characters. Returns a pointer to the match, or `NULL` if not found. If `needle` is an empty string, returns `haystack`.
@@ -1153,7 +1153,7 @@ ft_memcmp("abc", "axc", 3)  // 負の値
 #### `ft_strnstr` — n 文字以内での部分文字列検索
 
 ```c
-char *ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 ```
 
 `haystack` の先頭 `len` 文字以内で `needle` を検索し、最初に一致した位置へのポインタを返す。見つからない場合は `NULL`。`needle` が空文字列の場合は `haystack` を返す。
