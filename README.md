@@ -210,10 +210,10 @@ ft_memmove(buf + 1, buf, 4);
 #### `ft_strlcpy` — Safe string copy
 
 ```c
-size_t ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t ft_strlcpy(char *dst, const char *src, size_t size);
 ```
 
-Copies up to `dstsize - 1` characters from `src` to `dst`, always null-terminating the result. Returns the total length of `src` (not the number of bytes copied).
+Copies up to `size - 1` characters from `src` to `dst`, always null-terminating the result. Returns the total length of `src` (not the number of bytes copied).
 
 ```c
 char dst[4];
@@ -228,10 +228,10 @@ ft_strlcpy(dst, "Hello", 4);
 #### `ft_strlcat` — Safe string concatenation
 
 ```c
-size_t ft_strlcat(char *dst, const char *src, size_t dstsize);
+size_t ft_strlcat(char *dst, const char *src, size_t size);
 ```
 
-Appends `src` to `dst`, ensuring the result is null-terminated and does not exceed `dstsize` bytes total. Returns the total length that would have been created (`strlen(dst) + strlen(src)`).
+Appends `src` to `dst`, ensuring the result is null-terminated and does not exceed `size` bytes total. Returns the total length that would have been created (`strlen(dst) + strlen(src)`).
 
 ```c
 char dst[10] = "Hello";
@@ -370,7 +370,7 @@ ft_strnstr("hello", "", 5)              // pointer to "hello"
 #### `ft_atoi` — Convert string to integer
 
 ```c
-int ft_atoi(const char *str);
+int ft_atoi(const char *nptr);
 ```
 
 Converts the initial portion of `str` to an integer. Skips leading whitespace (`\t`, `\n`, `\v`, `\f`, `\r`, ` `), handles optional `+`/`-` sign, then reads digits.
@@ -405,7 +405,7 @@ int *arr = ft_calloc(5, sizeof(int));
 #### `ft_strdup` — Duplicate a string
 
 ```c
-char *ft_strdup(const char *s1);
+char *ft_strdup(const char *s);
 ```
 
 Allocates memory and returns a copy of `s1`. The caller is responsible for freeing the returned pointer.
@@ -1009,10 +1009,10 @@ ft_memmove(buf + 1, buf, 4);
 #### `ft_strlcpy` — サイズ制限付き文字列コピー
 
 ```c
-size_t ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t ft_strlcpy(char *dst, const char *src, size_t size);
 ```
 
-`src` から最大 `dstsize - 1` 文字を `dst` にコピーし、常にヌル終端する。戻り値は `src` の全長（コピーしたバイト数ではない）。
+`src` から最大 `size - 1` 文字を `dst` にコピーし、常にヌル終端する。戻り値は `src` の全長（コピーしたバイト数ではない）。
 
 ```c
 char dst[4];
@@ -1027,10 +1027,10 @@ ft_strlcpy(dst, "Hello", 4);
 #### `ft_strlcat` — サイズ制限付き文字列連結
 
 ```c
-size_t ft_strlcat(char *dst, const char *src, size_t dstsize);
+size_t ft_strlcat(char *dst, const char *src, size_t size);
 ```
 
-`dst` の末尾に `src` を追加し、合計が `dstsize` バイトを超えないようにヌル終端する。戻り値は作成されたであろう文字列の全長（`strlen(dst) + strlen(src)`）。
+`dst` の末尾に `src` を追加し、合計が `size` バイトを超えないようにヌル終端する。戻り値は作成されたであろう文字列の全長（`strlen(dst) + strlen(src)`）。
 
 ```c
 char dst[10] = "Hello";
@@ -1169,7 +1169,7 @@ ft_strnstr("hello", "", 5)              // "hello" へのポインタ
 #### `ft_atoi` — 文字列を整数に変換
 
 ```c
-int ft_atoi(const char *str);
+int ft_atoi(const char *nptr);
 ```
 
 `str` の先頭部分を整数に変換する。先頭の空白（`\t`、`\n`、`\v`、`\f`、`\r`、` `）をスキップし、省略可能な `+`/`-` 符号を処理してから数字を読み込む。
@@ -1204,7 +1204,7 @@ int *arr = ft_calloc(5, sizeof(int));
 #### `ft_strdup` — 文字列の複製
 
 ```c
-char *ft_strdup(const char *s1);
+char *ft_strdup(const char *s);
 ```
 
 メモリを確保して `s1` のコピーを返す。返されたポインタの解放は呼び出し元の責任。
