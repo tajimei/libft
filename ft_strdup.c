@@ -6,7 +6,7 @@
 /*   By: mtajima <mtajima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 16:58:22 by mtajima           #+#    #+#             */
-/*   Updated: 2026/04/30 18:29:05 by mtajima          ###   ########.fr       */
+/*   Updated: 2026/05/11 21:33:37 by mtajima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s)
 	size_t	i;
 
 	len = ft_strlen(s);
-	dup = malloc(len + 1);
+	dup = (char *)malloc(len + 1);
 	if (!dup)
 		return (NULL);
 	i = 0;

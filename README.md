@@ -440,6 +440,7 @@ ft_substr("Hello", 10, 5)       // "" (start exceeds string length)
 ft_substr("Hello", 0, 3)        // "Hel"
 ```
 
+> **Edge case:** If `start >= strlen(s)`, returns an empty string `""`.
 
 ---
 
@@ -1238,6 +1239,7 @@ ft_substr("Hello", 10, 5)       // "" (start が文字列長を超える)
 ft_substr("Hello", 0, 3)        // "Hel"
 ```
 
+> **エッジケース:** `start >= strlen(s)` の場合、空文字列 `""` を返す。
 
 ---
 

@@ -6,7 +6,7 @@
 /*   By: mtajima <mtajima@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 17:20:23 by mtajima           #+#    #+#             */
-/*   Updated: 2026/05/10 21:39:21 by mtajima          ###   ########.fr       */
+/*   Updated: 2026/05/11 22:06:06 by mtajima          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	slen = ft_strlen(s);
 	if (start >= slen)
-		return (NULL);
+		return (ft_strdup(""));
 	if (len > slen - start)
 		len = slen - start;
 	sub = malloc(len + 1);
